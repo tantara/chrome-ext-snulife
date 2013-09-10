@@ -1,0 +1,23 @@
+{
+	"name":"SNULife Animal Theme",
+	"description":"Chrome extension for SNULife Animal Theme",
+	"version":"1.0",
+	"manifest_version":2,
+	"icons":{
+		"19":"icon-19x18.png",
+		"48":"icon-48x48.png",
+		"128":"icon-128x128.png"
+	},
+	"browser_action": {
+		"default_icon":"icon-19x19.png",
+		"default_title":"Animal Theme"
+	},
+	"background": {
+		"page":"background.html"
+	},
+	"content_scripts": [{
+	"matches": ["http://snulife.com/*", "http://www.snulife.com/*"],
+	"js": ["jquery.js", "animal.js"]
+	}],
+	"permissions": ["tabs", "storage"]
+}
